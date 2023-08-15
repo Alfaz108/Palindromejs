@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Palindrome</title>
+</head>
+<body>
+    <section>
+        <div class="count">
+            <h1>Palindrome</h1>
+            <input id="input" type="text" placeholder="Enter a word">
+            <button id="sub" class="button">Check</button>
+            <p id="text"></p>
+        </div>
+
+    </section>
+
+    <script>
+        var a=document.getElementById("input");
+        var b=document.getElementById("sub");
+        var c=document.getElementById("text")
+        b.addEventListener('click',function(){
+         
+          var val=a.value;
+          var val2=[...val].reverse().join("");
+         
+          console.log(val);
+          console.log(val2);
+         for(var i=0;i<val.length;i++){
+          if(val==val2)
+          {
+            c.innerHTML="palindom";
+            
+            
+          }
+          else{
+            c.innerHTML="No palindom";
+          }
+         }
+         a.value="";
+       })
+    </script>
+
+</body>
+    
+
+
+ 
